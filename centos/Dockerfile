@@ -1,6 +1,7 @@
-FROM bzohdy/java:centos
+FROM bzohdy/sdkman:centos
 MAINTAINER bzohdy
-RUN yum -y update \
-	&& yum -y install groovy \
-	&& yum clean all
+RUN source "$SDKMAN_DIR/bin/sdkman-init.sh" \
+	&& sdk install groovy \
+	&& sdk flush temp \
+	&& sdk flush archives;
 CMD /bin/bash
