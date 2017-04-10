@@ -1,4 +1,4 @@
-FROM bzohdy/sdkman:centos
+FROM bzohdy/sdkman:centos-jdk7
 MAINTAINER bzohdy
 RUN source "$SDKMAN_DIR/bin/sdkman-init.sh" \
 	&& sdk install groovy \
