@@ -1,4 +1,4 @@
-FROM bzohdy/sdkman:alpine
+FROM bzohdy/sdkman:alpine-jdk7
 MAINTAINER bzohdy
 RUN source "$SDKMAN_DIR/bin/sdkman-init.sh" \
 	&& /bin/bash -l -c 'echo "y"|sdk install groovy' \
